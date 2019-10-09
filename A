@@ -1,0 +1,20 @@
+PHP
+#include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int main(void)
+{
+   int A[]={1,2,3,4,49,100,49};
+   vector<int> v(A,A+7);
+   vector<int>::iterator it=v.begin();		
+
+   while ((it = find(it, v.end(), 49)) != v.end()) 
+  {
+    cout << it - v.begin() << '\t' << *it << endl;
+    it++;
+  }
+	
+  return 0;
+}
